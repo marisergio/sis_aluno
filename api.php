@@ -20,7 +20,9 @@ if ($acao == "salvar") {
     $id = $_GET['id'];
     $alunoDao->deletar($id);
 } else if ($acao == "listar") {
-    $alunoDao->listar();
+    $alunos = $alunoDao->listar();
+    //print_r($alunos);
+    echo json_encode($alunos);
 }
 
 //echo "Nome: " . $nome;
