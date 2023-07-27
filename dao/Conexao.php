@@ -1,7 +1,8 @@
 <?php
 class Conexao
 {
-    public static function getConexao(){
+    public static function getConexao()
+    {
 
         $banco = "sis_aluno";
         $usuario = "root";

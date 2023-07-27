@@ -40,15 +40,7 @@ class AlunoDao
 
     public function listar()
     {
-        $sql = "SELECT * FROM aluno";
-        $conexao = Conexao::getConexao();
-        $stmt = $conexao->prepare($sql);
-        $stmt->execute();
-        $alunosBanco = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $alunos = array();
-        foreach ($alunosBanco as $aluno) {
-            $alunos[] = array("matricula" => $aluno['matricula'], "nome" => $aluno['nome'], "email" => $aluno['email']);
-        }
-        return $alunos;
     }
+
+    //$alunos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
